@@ -1,0 +1,58 @@
+{% include 'base.html' %}
+{% extends "layouts.html" %}
+{% block body %}
+<div class="content-wrapper">
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-8">
+      </div>
+    </div>
+  </div>
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-4">
+      </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card card-navy card-outline">
+                <div class="card-body">
+                    <h3 align="center"><font color="navy" face="arial"> Data Uji </font></h3>
+                  <div class="card-footer clearfix">
+        <table id="example" class="table table-bordered"  style="width:500%">
+        <thead>
+          <tr>
+            <th style="width: 10%;">No.</th>
+            <th style="width: 80%;">Text</th>
+            <th style="width: 10%;">Sentimen</th>
+            <th style="width: 10%;">label</th>
+                  
+          </tr>
+        </thead>
+        <tbody>
+          {% for data in sistem_test %}
+          <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{data.text}}</td>
+            <td>{{data.sentimen}}</td>
+            <td>{{data.label}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+ 
+{% endblock %}
+{% include 'footer.html' %}

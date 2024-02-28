@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ANALISIS SENTIMEN COVID 19</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='plugins/fontawesome-free/css/all.min.css') }}">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='plugins/jqvmap/jqvmap.min.css') }}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='dist/css/adminlte.min.css') }}">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='plugins/daterangepicker/daterangepicker.css') }}">
+  <!-- summernote -->
+<script src="{{ url_for('static', filename='plugins/jquery/jquery.min.js') }}"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='plugins/summernote/summernote-bs4.css') }}">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+
+<div class="wrapper">
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-2">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link">
+      <h2 align="center">WELCOME</h2>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-2 pb-2 mb-2 d-flex">
+        <div class="image">
+          <img src="{{ url_for('static', filename='dist/img/upn.png') }}" class="img-circle elevation-2" alt="User Image">
+        </div>
+      <div class="info">
+        <a href="" class="d-block">SISTEM ANALISIS <br> SENTIMEN</a>
+      </div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <nav class="mt-1">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
+        <li class="nav-item">
+          <a href="/web" class="nav-link">
+          <i class="nav-icon fas fa-house-user"></i>
+          <p> Beranda </p>
+          </a>
+        </li>
+              
+        <li class="nav-item has-treeview">
+          <a href="" class="nav-link">
+            <i class="nav-icon fas fa-database"></i>
+            <p>Master Data<i class="fas fa-angle-left right"></i></p>
+          </a>
+        <ul class="nav nav-treeview">
+          <li class="nav-item">
+            <a href="/sistem_dataset" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p> Dataset </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/sistem_train" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>Data Training</p>
+            </a>
+          </li>
+        
+          <li class="nav-item">
+            <a href="/sistem_test" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Data Testing</p>
+            </a>
+          </li>
+        </ul>
+      </li>
+        <li class="nav-item">
+          <a href="/sistem_preprocessing" class="nav-link">
+          <i class="nav-icon fas fa-copy"></i>
+          <p> Data Preprocessing </p>
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a href="/sistem_ujicoba" class="nav-link">
+          <i class="nav-icon fas fa-text-height"></i>
+          <p>  Uji Coba </p>
+          </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>

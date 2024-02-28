@@ -1,0 +1,52 @@
+{% include 'header.html' %}
+<div class="content-wrapper">
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-8">
+      </div>
+    </div>
+  </div>
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-4">
+      </div>
+    </div>
+    <div class="content">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card card-navy card-outline">
+                <div class="card-body">
+                    <h3 align="center"><font color="navy" face="arial"> Tambah Data Test</font></h3>
+  <form action="http://localhost:5000/submit_add_test" method="post">
+
+	 <div class="form-group">
+      <label for="text">Komentar :</label>
+      <input type="text" class="form-control" id="text" placeholder="Masukkan Komentar" name="text" required>
+    </div>
+
+    <div class="form-group">
+      <label for="sentimen">Sentimen (Positif/Negatif/Netral) :</label>
+      <input type="text" class="form-control" id="sentimen" placeholder="Sentimen" name="sentimen" required>
+    </div>
+
+	 <div class="form-group">
+      <label for="label">Label :</label>
+      <input type="text" class="form-control" id="label" placeholder="Label" name="label" required>
+    </div>
+
+       <br><br>
+      <div class="form-group">
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+	    <a href="{{ url_for('show_test') }}"><button type="button" class="btn btn-danger">Cancel</button></a>
+      </div>
+  </form>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+{% include 'footer.html' %}

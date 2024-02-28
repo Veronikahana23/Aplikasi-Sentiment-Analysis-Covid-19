@@ -1,0 +1,55 @@
+{% include 'header.html' %}
+{% extends "layouts.html" %}
+{% block body %}
+<div class="content-wrapper">
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-8">
+      </div>
+    </div>
+  </div>
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-4">
+      </div>
+    </div>
+    <div class="content">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card card-navy card-outline">
+                <div class="card-body">
+                    <h3 align="center"><font color="navy" face="arial"> Hasil Klasifikasi Sentimen K-Nearest Neighbor (K=9) </font></h3>
+                  <div class="card-footer clearfix">
+          <table id="example" class="table table-bordered"  style="width:500%">
+            <thead> 
+              <tr>
+                <th style="width: 10%;">No.</th>
+                <th style="width: 120%;">Text</th>
+                <th style="width: 30%;">Label Aktual</th>
+                <th style="width: 30%;">Label Prediksi</th>
+                <th style="width: 10%;">Aksi</th>
+              </tr>
+            </thead>
+        
+          <tbody>
+            {% for row in rows %}
+              <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+                <td width="100">
+                  <a href="http://localhost:5000/delete_hasil_knn/{{row[0]}}" class="btn btn-danger btn-delete btn-sm">delete</a>
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+ 
+{% endblock %}
+{% include 'footer.html' %}

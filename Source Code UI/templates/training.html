@@ -1,0 +1,95 @@
+{% include 'header.html' %}
+{% extends "layouts.html" %}
+{% block body %}
+<div class="content-wrapper">
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-8">
+      </div>
+    </div>
+  </div>
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-4">
+      </div>
+    </div>
+
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="info-box">
+              <span class="info-box-icon bg-success elevation-1"><i class="fas fa-smile"></i></span>
+  
+              <div class="info-box-content">
+                <span class="info-box-text">Positif (1)</span>
+                <span class="info-box-number">264</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-angry"></i></span>
+  
+              <div class="info-box-content">
+                <span class="info-box-text">Negatif (-1)</span>
+                <span class="info-box-number">585</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-meh"></i></span>
+  
+              <div class="info-box-content">
+                <span class="info-box-text">Netral (0)</span>
+                <span class="info-box-number">220</span>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix hidden-md-up"></div>
+        </div>
+      </div>
+
+    <div class="content">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card card-navy card-outline">
+                <div class="card-body">
+                    <h3 align="center"><font color="navy" face="arial"> Data Train (1069 Data)</font></h3>
+                  <div class="card-footer clearfix">
+                    <a href="{{ url_for('add_rec_train') }}"><button type="button" class="btn btn-info">Tambah Data</button></a>
+
+        <table id="example" class="table table-bordered"  style="width:500%">
+        <thead>
+          <tr>
+            <th style="width: 10%;">No.</th>
+            <th style="width: 80%;">Text</th>
+            <th style="width: 13%;">Sentimen</th>
+            <th style="width: 13%;">Label</th>
+            <th style="width: 13%;">Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in rows %}
+          <tr>
+            <td>{{row[0]}}</td>
+              <td>{{row[1]}}</td>
+              <td>{{row[2]}}</td>
+              <td>{{row[3]}}</td>
+            <td width="130">
+              <a href="http://localhost:5000/edit_train/{{row[0]}}" class="btn btn-primary btn-sm">edit</a>
+              <a href="http://localhost:5000/delete_train/{{row[0]}}" class="btn btn-danger btn-delete btn-sm">delete</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+ 
+{% endblock %}
+{% include 'footer.html' %}
